@@ -31,6 +31,9 @@ fs.writeFileSync(path.join(projectDir, 'README.md'), `
 # ${projectName}
 `);
 
-spawn.sync('npm', ['install'], { stdio: 'inherit' });
+spawn.sync('npm', ['install'], {
+   stdio: 'inherit',
+   cwd: projectDir
+   });
 
 console.log(`Created ${projectName} at ${projectDir}`);
