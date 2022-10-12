@@ -146,5 +146,6 @@ dist
 .theia
 .idea
 .DS_Store
+.fleet
 
 # End of https://www.toptal.com/developers/gitignore/api/node
