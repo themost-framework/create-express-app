@@ -27,6 +27,10 @@ fs.writeFileSync(
   JSON.stringify(projectPackageJson, null, 2)
 );
 
+fs.writeFileSync(path.join(projectDir, 'README.md'), `
+# ${projectName}
+`);
+
 spawn.sync('npm', ['install'], { stdio: 'inherit' });
 
 console.log(`Created ${projectName} at ${projectDir}`);
