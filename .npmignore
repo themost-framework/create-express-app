@@ -1,6 +1,12 @@
 # babel
-babel.config.js
+/babel.config.js
 
 # git
 .gitignore
 .github
+!modules/template/.gitignore
+
+
+
+# build
+modules/template/dist/**/*
