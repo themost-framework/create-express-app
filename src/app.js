@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
 
 function getApplication() {
     // init app
@@ -7,10 +8,12 @@ function getApplication() {
     // https://github.com/expressjs/cors#usage
     app.use(cors());
 
+    // https://expressjs.com/en/guide/using-template-engines.html
+    app.set('view engine', 'ejs');
+    app.set('views', path.resolve(__dirname, 'views'));
+
     app.get('/', (req, res) => {
-        res.send(`
-        <h2>Express.js template</h2>
-        `)
+        return res.render('index');
     });
 
     // and return
