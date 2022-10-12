@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "ExpressJS boostrap app",
   "bin": {
-    "create-express-app": "bin/create.js"
+    "create-express-app": "bin/create"
   },
   "keywords": [
     "express",
@@ -12,7 +12,8 @@
   ],
   "license": "BSD-3-Clause",
   "dependencies": {
-    "cross-spawn": "^7.0.3"
+    "cross-spawn": "^7.0.3",
+    "fs-extra": "^10.1.0"
   },
   "devDependencies": {}
 }
