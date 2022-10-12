@@ -1,6 +1,5 @@
-#!/usr/bin/env node
 /* eslint-env node */
-const { serveApplication, getApplication } = require('../dist/index');
+const { serveApplication, getApplication } = require('../src/index');
 const debug = require('debug');
 debug.enable('app:*');
 const error = debug('app:error');
