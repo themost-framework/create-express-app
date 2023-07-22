@@ -1,13 +1,13 @@
 {
   "name": "create-express-app",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "main": "dist/index.js",
   "scripts": {
     "start": "node bin/www",
     "serve": "nodemon bin/serve",
     "prestart": "npm run build",
-    "test": "jest",
+    "test": "nyc jasmine",
     "build": "babel src --out-dir dist --copy-files"
   },
   "keywords": [
@@ -16,6 +16,7 @@
   ],
   "license": "BSD-3-Clause",
   "dependencies": {
+    "@themost/ejs": "^2.0.1",
     "cors": "^2.8.5",
     "debug": "^4.3.4",
     "ejs": "^3.1.8",
@@ -27,11 +28,12 @@
     "@babel/eslint-parser": "^7.19.1",
     "@babel/preset-env": "^7.19.4",
     "@babel/register": "^7.18.9",
-    "@types/jest": "^29.1.2",
     "dotenv": "^16.0.3",
     "eslint": "^8.25.0",
-    "jest": "^29.1.2",
-    "nodemon": "^2.0.20",
+    "jasmine": "^5.0.2",
+    "jasmine-spec-reporter": "^7.0.0",
+    "nodemon": "^3.0.1",
+    "nyc": "^15.1.0",
     "supertest": "^6.3.0"
   },
   "nodemonConfig": {

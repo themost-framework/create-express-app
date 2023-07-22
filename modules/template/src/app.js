@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
+import {ViewEngine} from '@themost/ejs';
 
 function getApplication() {
     // init app
@@ -9,6 +10,7 @@ function getApplication() {
     app.use(cors());
 
     // https://expressjs.com/en/guide/using-template-engines.html
+    app.engine('ejs', ViewEngine.express());
     app.set('view engine', 'ejs');
     app.set('views', path.resolve(__dirname, 'views'));
 
