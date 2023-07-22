@@ -1,6 +1,6 @@
 {
   "name": "@themost/create-express-app",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "ExpressJS boostrap app",
   "bin": {
     "create-express-app": "bin/create"
