@@ -2,9 +2,9 @@
 /babel.config.js
 
 # git
-.gitignore
+!/modules/template/.gitignore
 .github
-!modules/template/.gitignore
+
 
 
 
