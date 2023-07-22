@@ -12,6 +12,12 @@ const projectName = process.argv[2];
 // Create a project directory with the project name.
 const currentDir = process.cwd();
 const projectDir = path.resolve(currentDir, projectName);
+
+if (fs.existsSync(projectDir)) {
+  console.error('\x1b[31m', 'ERROR', 'Project directory already exists. Use a different project name.');
+  return process.exit(2);
+}
+
 fs.mkdirSync(projectDir, { recursive: true });
 
 const templateDir = path.resolve(__dirname, '../modules/template');
@@ -36,4 +42,4 @@ spawn.sync('npm', ['install'], {
    cwd: projectDir
    });
 
-console.log(`Created ${projectName} at ${projectDir}`);
+console.log('\x1b[32m', `A new project has been created at ${projectDir}`);
